@@ -30,19 +30,23 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Run deploy contracts on Monad (& generate contracts typescript output)
-        env:
-          DEPLOYER_PRIVATE_KEY: ${{ secrets.KEY }}
-          MONAD_RPC_URL: ${{ secrets.URL }}
-          MONAD_CHAIN_ID: ${{ secrets.CHAIN_ID }}
-          MONAD_EXPLORER_URL: ${{ secrets.EXPLORER }}
-        run: yarn deploy --network monadTestnet
+      - name: Compile contracts and generate TypeScript types
+        run: yarn compile
+
+      - name: Run hardhat tests
+        run: yarn hardhat:test
+
+      - name: Check typings on hardhat
+        run: yarn hardhat:check-types
 
       - name: Run nextjs lint
         run: yarn next:lint --max-warnings=0
 
       - name: Check typings on nextjs
         run: yarn next:check-types
+
+      - name: Build nextjs
+        run: yarn next:build
 
       - name: Run hardhat lint
         run: yarn hardhat:lint --max-warnings=0

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { RainbowKitProvider, darkTheme, lightTheme } from "@rainbow-me/rainbowkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
@@ -9,19 +10,21 @@ import { Toaster } from "react-hot-toast";
 import { WagmiProvider } from "wagmi";
 import { Footer } from "~~/components/Footer";
 import { Header } from "~~/components/Header";
+import { useLocale } from "~~/components/parasite/LocaleProvider";
 import { BlockieAvatar } from "~~/components/scaffold-eth";
 import { useInitializeNativeCurrencyPrice } from "~~/hooks/scaffold-eth";
 import { wagmiConfig } from "~~/services/web3/wagmiConfig";
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   useInitializeNativeCurrencyPrice();
+  const isParasite = usePathname() === "/";
 
   return (
     <>
       <div className="flex flex-col min-h-screen">
-        <Header />
+        {!isParasite && <Header />}
         <main className="relative flex flex-col flex-1">{children}</main>
-        <Footer />
+        {!isParasite && <Footer />}
       </div>
       <Toaster />
     </>
@@ -37,6 +40,8 @@ export const queryClient = new QueryClient({
 });
 
 export const ScaffoldEthAppWithProviders = ({ children }: { children: React.ReactNode }) => {
+  const { locale } = useLocale();
+  const isParasite = usePathname() === "/";
   const { resolvedTheme } = useTheme();
   const isDarkMode = resolvedTheme === "dark";
   const [mounted, setMounted] = useState(false);
@@ -50,8 +55,22 @@ export const ScaffoldEthAppWithProviders = ({ children }: { children: React.Reac
       <QueryClientProvider client={queryClient}>
         <ProgressBar height="3px" color="#2299dd" />
         <RainbowKitProvider
+          locale={locale === "tr" ? "tr-TR" : "en-US"}
           avatar={BlockieAvatar}
-          theme={mounted ? (isDarkMode ? darkTheme() : lightTheme()) : lightTheme()}
+          theme={
+            isParasite
+              ? darkTheme({
+                  accentColor: "#dfabd4",
+                  accentColorForeground: "#160e1c",
+                  borderRadius: "small",
+                  overlayBlur: "small",
+                })
+              : mounted
+                ? isDarkMode
+                  ? darkTheme()
+                  : lightTheme()
+                : lightTheme()
+          }
         >
           <ScaffoldEthApp>{children}</ScaffoldEthApp>
         </RainbowKitProvider>

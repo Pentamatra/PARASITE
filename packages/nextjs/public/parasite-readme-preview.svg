@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+  <title id="title">PARASITE — Your Wallet Is Alive</title>
+  <desc id="desc">A violet wallet nucleus connected to pink and amber permission organisms on a dark background. Discover. Understand. Exterminate.</desc>
+  <defs>
+    <radialGradient id="atmosphere"><stop stop-color="#34204d"/><stop offset="1" stop-color="#090910"/></radialGradient>
+    <radialGradient id="core"><stop stop-color="#efbaff" stop-opacity=".65"/><stop offset=".35" stop-color="#8f65cc" stop-opacity=".35"/><stop offset="1" stop-color="#181329"/></radialGradient>
+    <linearGradient id="accent"><stop stop-color="#eab7fa"/><stop offset="1" stop-color="#b36bf5"/></linearGradient>
+    <linearGradient id="edge"><stop stop-color="#dc86db"/><stop offset=".6" stop-color="#64467e"/><stop offset="1" stop-color="#82dfdc"/></linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#c7b4e9" stroke-opacity=".045"/></pattern>
+  </defs>
+  <rect width="1600" height="520" rx="22" fill="#090910"/>
+  <rect x="775" width="825" height="520" rx="22" fill="url(#atmosphere)"/>
+  <rect width="1600" height="520" rx="22" fill="url(#grid)"/>
+  <rect x="1" y="1" width="1598" height="518" rx="21" fill="none" stroke="#705485" stroke-opacity=".4"/>
+  <path d="M38 1H1560" stroke="url(#edge)" stroke-width="3"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="76" y="83" fill="#caa8df" font-size="14" letter-spacing="4">WALLET PERMISSIONS, MADE VISIBLE.</text>
+    <text x="70" y="213" fill="#faf4ff" font-size="114" font-weight="800" letter-spacing="9">PARASITE</text>
+    <text x="76" y="276" fill="url(#accent)" font-size="35" font-weight="700" letter-spacing="3">YOUR WALLET IS ALIVE.</text>
+    <text x="77" y="324" fill="#b7a9c9" font-size="22">Discover. Understand. Exterminate.</text>
+    <rect x="76" y="377" width="196" height="37" rx="18" fill="#20152d" stroke="#9a65bd" stroke-opacity=".5"/>
+    <circle cx="96" cy="395" r="4" fill="#a58cff"/><text x="112" y="401" fill="#e2d7fb" font-size="13" letter-spacing="1">MONAD TESTNET</text>
+    <rect x="285" y="377" width="171" height="37" rx="18" fill="#0e2526" stroke="#80d9d1" stroke-opacity=".3"/>
+    <text x="305" y="401" fill="#a3e7de" font-size="13" letter-spacing="1">VERIFIED READS</text>
+    <text x="78" y="470" fill="#8a799a" font-size="13">One wallet. Real approvals. Independently checked results.</text>
+  </g>
+  <g transform="translate(1200 270)">
+    <circle r="180" fill="none" stroke="#b38bd9" stroke-opacity=".14"/>
+    <circle r="147" fill="none" stroke="#b38bd9" stroke-opacity=".14" stroke-dasharray="2 9"/>
+    <ellipse rx="204" ry="110" transform="rotate(-28)" fill="none" stroke="#b38bd9" stroke-opacity=".15"/>
+    <ellipse rx="181" ry="111" transform="rotate(37)" fill="none" stroke="#b38bd9" stroke-opacity=".2"/>
+    <path d="M0 0Q70-100 155-133" fill="none" stroke="#e97eac" stroke-width="2"/>
+    <path d="M0 0Q-80 90-157 117" fill="none" stroke="#d7ae63" stroke-width="2"/>
+    <circle r="87" fill="url(#core)" stroke="#c2b2f6" stroke-opacity=".6"/>
+    <circle r="70" fill="none" stroke="#cbb8ff" stroke-opacity=".45"/>
+    <ellipse rx="32" ry="70" fill="none" stroke="#cbb8ff" stroke-opacity=".5"/>
+    <ellipse rx="70" ry="25" fill="none" stroke="#cbb8ff" stroke-opacity=".5"/>
+    <path d="M0-48 42-24V24L0 48-42 24V-24ZM-42-24 0 0 42-24M0 0V48" fill="none" stroke="#e9d0ff" stroke-width="2"/>
+    <circle r="8" fill="#efd0ff"/>
+  </g>
+  <g transform="translate(1355 137)" stroke="#f28cbb" fill="#4d2548">
+    <path d="M0-45 24-25 32 10 16 43 0 59-16 43-32 10-24-25Z"/>
+    <path d="M-20-25-42-48-58-35-44-15M20-25 42-48 58-35 44-15M-29-5-53-18-64 0-47 15M29-5 53-18 64 0 47 15M-25 18-47 16-57 40-38 49M25 18 47 16 57 40 38 49" fill="none" stroke-width="2"/>
+    <ellipse rx="18" ry="21" fill="#1b1020"/><ellipse rx="10" ry="13" fill="#e58dbb"/><ellipse rx="3" ry="11" fill="#130c1b"/>
+  </g>
+  <g transform="translate(1043 387)" stroke="#e9bc78" fill="#694d29">
+    <path d="M-9-22C-55-55-62-8-26 0C-64 25-30 52-12 26C-5 69 34 52 21 18C63 21 58-22 25-17C32-61-11-65-9-22Z" fill-opacity=".8"/>
+    <ellipse rx="24" ry="28" fill="#251c19"/><ellipse rx="17" ry="20" fill="#b09052"/><ellipse rx="4" ry="13" fill="#19131a"/>
+    <path d="M-12 24Q-33 48-15 68M8 27Q30 52 10 73" fill="none"/>
+  </g>
+  <g fill="#ac92ce" opacity=".6"><circle cx="947" cy="151" r="2"/><circle cx="1510" cy="271" r="2"/><circle cx="1082" cy="62" r="1.5"/><circle cx="1445" cy="445" r="2"/></g>
+</svg>

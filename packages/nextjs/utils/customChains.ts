@@ -8,7 +8,7 @@ export const monadTestnet = defineChain({
   rpcUrls: {
     default: {
       // TODO: Add Monad RPC URL
-      http: ["<MONAD_RPC_URL>"],
+      http: [process.env.NEXT_PUBLIC_MONAD_RPC_URL || "https://testnet-rpc.monad.xyz"],
     },
   },
   blockExplorers: {

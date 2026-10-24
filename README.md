@@ -219,6 +219,8 @@ Tests cover finite/unlimited/zero allowances, owner isolation, independent spend
 
 **Your wallet. Your permissions. Your control.**
 
+[Maintained by @Pentamatra](https://github.com/Pentamatra)
+
 [Read in Turkish](README.tr.md) · [Developer guide](docs/DEVELOPMENT.md) · [Report an issue](https://github.com/Pentamatra/PARASITE/issues)
 
 </div>
